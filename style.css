@@ -7,17 +7,16 @@
 /* ===== ADDED: link inside work cards (keeps image filling the box) ===== */
 .work-image a{display:block;height:100%}
 
-/* ===== ADDED: GALLERY CAROUSEL ===== */
-.gallery-title{font-size:clamp(24px,3vw,32px);letter-spacing:-.04em;margin:70px 0 22px}
-.carousel{position:relative}
-.gallery{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:var(--accent) var(--line)}
-.gallery figure{flex:0 0 85%;scroll-snap-align:start;margin:0}
-.gallery img{width:100%;height:auto;display:block;border:1px solid var(--line);background:var(--white)}
-.gallery figcaption{font:10px "DM Mono",monospace;letter-spacing:.06em;color:var(--muted);margin-top:10px}
-.carousel-btn{position:absolute;top:40%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:var(--ink);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(23,35,31,.25)}
-.carousel-btn:hover{background:var(--accent)}
+/* ===== BLOG PERFORMANCE CAROUSEL (one large image at a time) ===== */
+.carousel{max-width:1000px;margin:0 auto}
+.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;background:var(--white);border:1px solid var(--line);scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{flex:0 0 100%;scroll-snap-align:center;margin:0}
+.gallery img{width:100%;height:auto;display:block}
+.gallery figcaption{padding:14px 18px;border-top:1px solid var(--line);font:11px "DM Mono",monospace;letter-spacing:.08em;color:var(--muted)}
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:22px}
+.carousel-btn{width:54px;height:54px;border:0;border-radius:50%;background:var(--ink);color:#fff;font-size:22px;line-height:1;cursor:pointer;transition:background .2s,transform .2s}
+.carousel-btn:hover{background:var(--accent);transform:scale(1.06)}
+.carousel-count{font:12px "DM Mono",monospace;letter-spacing:.12em;color:var(--muted);min-width:70px;text-align:center}
 .carousel-btn:focus-visible,.gallery:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.carousel-btn.prev{left:-14px}
-.carousel-btn.next{right:-14px}
-@media(min-width:900px){.gallery figure{flex-basis:calc(50% - 10px)}}
-@media(max-width:560px){.carousel-btn{display:none}.gallery figure{flex-basis:90%}}
+@media(max-width:560px){.carousel-btn{width:46px;height:46px;font-size:18px}}
