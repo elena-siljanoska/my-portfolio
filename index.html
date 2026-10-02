@@ -6,7 +6,39 @@
   <meta name="description" content="SEO & GEO content writer helping B2B SaaS brands get found in search and cited in AI answers.">
   <meta name="theme-color" content="#f7f6f2">
   <title>SEO & GEO Content Writer | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
+
+  <!-- Carousel and reoptimization styles live here, so old rules in style.css can't break them -->
+  <style>
+    /* ---- Carousel ---- */
+    .carousel{max-width:1000px;margin:0 auto;position:relative}
+    .gallery{display:block!important;overflow:visible!important;background:#fff;border:1px solid #dfe2da}
+    .gallery figure{display:none!important;margin:0!important;flex:none!important;width:100%!important}
+    .gallery figure.active{display:block!important}
+    .gallery img{width:100%!important;height:auto!important;display:block}
+    .gallery figcaption{padding:14px 18px;border-top:1px solid #dfe2da;font:11px "DM Mono",monospace;letter-spacing:.08em;color:#65716b}
+    .carousel-controls{position:relative!important;z-index:50!important;display:flex!important;align-items:center;justify-content:center;gap:22px;margin-top:22px}
+    .carousel-btn{position:static!important;transform:none!important;width:54px!important;height:54px!important;border:0;border-radius:50%;background:#17231f;color:#fff;font-size:22px;line-height:1;cursor:pointer;pointer-events:auto!important;display:inline-flex!important;align-items:center;justify-content:center;padding:0}
+    .carousel-btn:hover{background:#39765d}
+    .carousel-count{font:12px "DM Mono",monospace;letter-spacing:.12em;color:#65716b;min-width:70px;text-align:center}
+
+    /* ---- Reoptimization ---- */
+    .result-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))!important;gap:18px}
+    .result-card .metrics strong{font-size:clamp(20px,2.4vw,26px)!important}
+    .reopt-changes{margin-top:16px;border-top:1px solid #dfe2da;padding-top:12px}
+    .reopt-changes summary{cursor:pointer;font:600 12px "DM Sans",Arial,sans-serif;color:#39765d;list-style:none}
+    .reopt-changes summary::-webkit-details-marker{display:none}
+    .reopt-changes summary::after{content:" +"}
+    .reopt-changes[open] summary::after{content:" −"}
+    .reopt-changes ul{margin:12px 0 0;padding-left:18px;font-size:12px;line-height:1.7;color:#65716b}
+    .reopt-changes li{margin-bottom:6px}
+    .reopt-shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:28px}
+    .reopt-shots figure{margin:0;background:#fff;border:1px solid #dfe2da}
+    .reopt-shots img{width:100%;height:auto;display:block}
+    .reopt-shots figcaption{padding:12px 16px;border-top:1px solid #dfe2da;font:11px "DM Mono",monospace;letter-spacing:.06em;color:#65716b}
+
+    @media(max-width:560px){.carousel-btn{width:46px!important;height:46px!important;font-size:18px}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -62,60 +94,59 @@
           </div>
 
           <div class="carousel-controls">
-            <button class="carousel-btn" id="prevBtn" type="button" aria-label="Previous image">←</button>
+            <button class="carousel-btn" type="button" aria-label="Previous image" onclick="carouselGo(-1)">←</button>
             <span class="carousel-count" id="carousel-count" aria-live="polite">1 / 13</span>
-            <button class="carousel-btn" id="nextBtn" type="button" aria-label="Next image">→</button>
+            <button class="carousel-btn" type="button" aria-label="Next image" onclick="carouselGo(1)">→</button>
           </div>
 
         </div>
       </div>
     </section>
 
+    <!-- ============ REOPTIMIZATION ============ -->
     <section class="section wrap results" id="results">
-      <div class="section-head"><div><p class="section-kicker">REOPTIMIZATION</p><h2>Reoptimization results.</h2></div><p class="section-desc">Figures below come from Google Search Console and compare equal-length 14-day periods.</p></div>
+      <div class="section-head">
+        <div><p class="section-kicker">REOPTIMIZATION</p><h2>Reoptimization results.</h2></div>
+        <p class="section-desc">Pages that already had some visibility, refreshed using Google Search Console data. Each comparison uses equal-length periods before and after the update.</p>
+      </div>
+
       <div class="result-grid">
-        <article class="result-card"><p class="result-label">VIRTUAL TRY-ON · </p><h3>Search visibility improved</h3><div class="metrics"><div><strong>41 <b>→</b> 362</strong><small>Impressions</small></div><div><strong>8.4 <b>→</b> 2.9</strong><small>Average position</small></div></div><p class="change">+782.9% impressions · 21 Jul–3 Aug vs. 8–21 Aug 2026</p><p class="result-detail">Updates included a revised intro, H1 and metadata, new buyer-focused headings, additional best practices and four FAQs.</p></article>
-        <article class="result-card"><p class="result-label">OPTOMETRY PRACTICE KPIS</p><h3>More impressions and clicks</h3><div class="metrics"><div><strong>689 <b>→</b> 873</strong><small>Impressions</small></div><div><strong>8 <b>→</b> 11</strong><small>Clicks</small></div></div><p class="change">+26.7% impressions · 3–16 Aug vs. 22 Aug–4 Sep 2026</p><p class="result-detail">Updates included query-aligned headings, a revised meta description, improved internal links and five FAQs.</p></article>
-      </div>
-      <p class="fineprint">Results are from Google Search Console. They are page-level comparisons and do not establish that any single change caused the full difference.</p>
-    </section>
 
-    <section class="contact-section" id="contact">
-      <div class="wrap contact-inner">
-        <p class="section-kicker">HAVE A PROJECT IN MIND?</p>
-        <h2>Let's make your<br>content work harder.</h2>
-        <p>Have a content challenge or want to discuss a project?</p>
-        <a class="button light" href="mailto:e_jovanoska@outlook.com">Email me <span>↗</span></a>
-      </div>
-    </section>
-  </main>
-  
-  <footer class="site-footer"><span>SEO · GEO CONTENT WRITER</span><a href="#home">Back to top ↑</a><span>Portfolio</span></footer>
+        <article class="result-card">
+          <p class="result-label">VIRTUAL TRY-ON · OPTICAL INDUSTRY</p>
+          <h3>Top 3 average position</h3>
+          <div class="metrics">
+            <div><strong>41 <b>→</b> 362</strong><small>Impressions</small></div>
+            <div><strong>8.4 <b>→</b> 2.9</strong><small>Average position</small></div>
+          </div>
+          <p class="change">+782.9% impressions · clicks 0 → 3</p>
+          <p class="result-detail">21 Jul–3 Aug vs. 8–21 Aug 2026 (14-day periods). Based on long-tail queries from Search Console, to test whether the page ranks better in LLMs.</p>
+          <details class="reopt-changes">
+            <summary>What I changed</summary>
+            <ul>
+              <li>Added an H2 targeting the page's top long-tail query about optical shop mirrors and eyewear fitting</li>
+              <li>Rewrote the intro to lead with market growth and the shift to digital shopping</li>
+              <li>Updated the H1, meta title and meta description to target "virtual try-on augmented reality"</li>
+              <li>Added an H2 for B2B buyers comparing VTO vendors, with questions to consider</li>
+              <li>Added AR/VR optics testing and staff AR training to the best-practice section</li>
+              <li>Updated the conclusion to link the topic back to the client's practice-management products</li>
+              <li>Added four Q&amp;As to the previously empty FAQ section</li>
+            </ul>
+          </details>
+        </article>
 
-  <script>
-    (function () {
-      var slides = document.querySelectorAll("#gallery figure");
-      var counter = document.getElementById("carousel-count");
-      var index = 0;
-
-      function show(n) {
-        index = (n + slides.length) % slides.length;
-        for (var k = 0; k < slides.length; k++) {
-          slides[k].classList.toggle("active", k === index);
-        }
-        counter.textContent = (index + 1) + " / " + slides.length;
-      }
-
-      document.getElementById("nextBtn").addEventListener("click", function () { show(index + 1); });
-      document.getElementById("prevBtn").addEventListener("click", function () { show(index - 1); });
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowRight") show(index + 1);
-        if (e.key === "ArrowLeft") show(index - 1);
-      });
-
-      show(0);
-    })();
-  </script>
-</body>
-</html>
+        <article class="result-card">
+          <p class="result-label">OPTOMETRY PRACTICE KPIS</p>
+          <h3>More impressions and clicks</h3>
+          <div class="metrics">
+            <div><strong>689 <b>→</b> 873</strong><small>Impressions</small></div>
+            <div><strong>8 <b>→</b> 11</strong><small>Clicks</small></div>
+          </div>
+          <p class="change">+26.7% impressions · +37.5% clicks · position 8.4 → 7.9</p>
+          <p class="result-detail">3–16 Aug vs. 22 Aug–4 Sep 2026 (14-day periods). Based on long-tail queries from Search Console.</p>
+          <details class="reopt-changes">
+            <summary>What I changed</summary>
+            <ul>
+              <li>Renamed an H3 to "Average Revenue Per Patient in Optometry" to match the top query by impressions, and made the formula more visible</li>
+              <li>Renamed the "Turning Data Into Decisions" H2 to "How to Improve Efficiency in an Optometry Practice" to match a target query</li>
+              <li>Worked the phrase "business analytics for eye care practices" into
