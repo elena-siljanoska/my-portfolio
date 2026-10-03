@@ -44,7 +44,7 @@
   <header class="site-header">
     <a class="brand" href="#home">SEO<span>·</span>GEO <small>CONTENT WRITER</small></a>
     <nav aria-label="Main navigation">
-      <a href="#services">Services</a><a href="#work">Content Writing</a><a href="#results">Reoptimization</a><a class="nav-cta" href="mailto:e_jovanoska@outlook.com">Let's talk ↗</a>
+      <a href="#services">Services</a><a href="#blogs">Writing</a><a href="#work">Performance</a><a href="#results">Reoptimization</a><a class="nav-cta" href="mailto:e_jovanoska@outlook.com">Let's talk ↗</a>
     </nav>
   </header>
 
@@ -76,6 +76,49 @@
         <article class="service"><span class="num">04</span><h3>SEO / GEO writing<br>& reoptimization</h3><p>Reader-first content aligned with search intent, with clear answers, useful comparisons, contextual links and FAQs. Existing content is refreshed based on evidence.</p><span class="service-foot">Writing · Refreshes · Optimization</span></article>
       </div>
     </section>
+
+    <section class="section wrap" id="blogs">
+  <div class="section-head">
+    <div><p class="section-kicker">WRITING SAMPLES</p><h2>Blogs I've written.</h2></div>
+    <p class="section-desc">Articles written for search intent and AI visibility. Open an article to read it, or jump to its Search Console results.</p>
+  </div>
+
+  <div class="blog-grid">
+    <!-- Copy this whole <article> for each blog -->
+    <article class="blog-card">
+      <p class="blog-tag">GEO · TOFU</p>
+      <h3><a href="https://YOUR-ARTICLE-URL" target="_blank" rel="noopener">What Is Technical GEO?</a></h3>
+      <p class="blog-excerpt">A plain-English guide for SaaS marketers on making pages easy for AI engines to read and cite.</p>
+      <p class="blog-meta"><span>Month YYYY</span></p>
+      <div class="blog-links">
+        <a href="https://smartclick.agency/blog/what-is-technical-geo/" target="_blank" rel="noopener">Read article ↗</a>
+        <a href="#work" onclick="carouselGoTo('what-is-technical-geo-1.png')">See results ↓</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <p class="blog-tag">AEO · MOFU</p>
+      <h3><a href="https://smartclick.agency/blog/how-to-create-an-aeo-strategy/" target="_blank" rel="noopener">How to Create an AEO Strategy for SaaS</a></h3>
+      <p class="blog-excerpt">Step-by-step framework for earning answers in AI Overviews, with examples and a checklist.</p>
+      <p class="blog-meta"><span>Month YYYY</span></p>
+      <div class="blog-links">
+        <a href="https://smartclick.agency/blog/how-to-create-an-aeo-strategy/" target="_blank" rel="noopener">Read article ↗</a>
+        <a href="#work" onclick="carouselGoTo('how-to-create-an-aeo-stratgy-for-saas-1.png')">See results ↓</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <p class="blog-tag">INTERNAL LINKING · MOFU</p>
+      <h3><a href="https://smartclick.agency/blog/internal-linking-for-ai-visibility/" target="_blank" rel="noopener">Internal Linking for AI Visibility</a></h3>
+      <p class="blog-excerpt">How pillar and cluster links help AI search engines map your topics and cite your pages.</p>
+      <p class="blog-meta"><span>Month YYYY</span></p>
+      <div class="blog-links">
+        <a href="https://smartclick.agency/blog/internal-linking-for-ai-visibility/" target="_blank" rel="noopener">Read article ↗</a>
+        <a href="#work" onclick="carouselGoTo('internal-linking-for-ai-visibility-1.jpg')">See results ↓</a>
+      </div>
+    </article>
+  </div>
+</section>
 
     <section class="work-section" id="work">
       <div class="wrap section">
@@ -241,6 +284,16 @@
       slides[carouselIndex].classList.add("active");
       document.getElementById("carousel-count").textContent = (carouselIndex + 1) + " / " + slides.length;
     }
+    function carouselGoTo(filename) {
+  var slides = document.querySelectorAll("#gallery figure");
+  for (var i = 0; i < slides.length; i++) {
+    var img = slides[i].querySelector("img");
+    if (img && img.getAttribute("src") === filename) {
+      carouselGo(i - carouselIndex);
+      return;
+    }
+  }
+}
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "ArrowRight") carouselGo(1);
