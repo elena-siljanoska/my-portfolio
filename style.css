@@ -34,11 +34,11 @@
 .reopt-changes ul{margin:12px 0 0;padding-left:18px;font-size:12px;line-height:1.7;color:var(--muted)}
 .reopt-changes li{margin-bottom:6px}
 
-/* NEW: "Read article" link next to "What I changed" */
+/* "Read article" link in line with "What I changed" */
 .reopt-row{position:relative;margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
 .reopt-row .reopt-changes{margin-top:0;border-top:0;padding-top:0}
-.reopt-row .reopt-changes summary{display:inline-block}
-.reopt-row .read-link{position:absolute;top:12px;left:118px;font:600 12px "DM Sans",Arial,sans-serif;line-height:normal;color:var(--accent);text-decoration:none}
+.reopt-row .reopt-changes summary{display:block;width:fit-content;line-height:1.6}
+.reopt-row .read-link{position:absolute;top:12px;left:118px;font:600 12px/1.6 "DM Sans",Arial,sans-serif;color:var(--accent);text-decoration:none}
 .reopt-row .read-link:hover{text-decoration:underline}
 
 .reopt-group{font:11px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px}
