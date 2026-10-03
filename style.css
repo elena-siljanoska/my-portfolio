@@ -34,12 +34,14 @@
 .reopt-changes ul{margin:12px 0 0;padding-left:18px;font-size:12px;line-height:1.7;color:var(--muted)}
 .reopt-changes li{margin-bottom:6px}
 
-/* "Read article" link in line with "What I changed" */
-.reopt-row{position:relative;margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
-.reopt-row .reopt-changes{margin-top:0;border-top:0;padding-top:0}
-.reopt-row .reopt-changes summary{display:block;width:fit-content;line-height:1.6}
-.reopt-row .read-link{position:absolute;top:12px;left:118px;font:600 12px/1.6 "DM Sans",Arial,sans-serif;color:var(--accent);text-decoration:none}
-.reopt-row .read-link:hover{text-decoration:underline}
+/* "Read article" link in line with "What I changed", on the right */
+.reopt-changes summary.has-link{display:flex;align-items:baseline;justify-content:space-between;gap:16px;line-height:1.6}
+.reopt-changes summary.has-link::after,
+.reopt-changes[open] summary.has-link::after{content:none}
+.reopt-changes summary.has-link .sum-label::after{content:" +"}
+.reopt-changes[open] summary.has-link .sum-label::after{content:" −"}
+.reopt-changes .read-link{font:600 12px/1.6 "DM Sans",Arial,sans-serif;color:var(--accent);text-decoration:none}
+.reopt-changes .read-link:hover{text-decoration:underline}
 
 .reopt-group{font:11px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px}
 .reopt-group:first-of-type{margin-top:0}
